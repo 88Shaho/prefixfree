@@ -1,12 +1,12 @@
 // Scripts for the demo page of -prefix-free
 
-function $(id) { return document.getElementById(id) }
+function (id) { return document.getElementById(id) }
 
 (function(){
 
 if(window.PrefixFree) {
-	var source = $('source'),
-		prefixed = $('prefixed');
+	var source = ('source'),
+		prefixed = ('prefixed');
 		
 	(source.oninput = function() {
 		prefixed.value = PrefixFree.prefixCSS(source.value, true);
